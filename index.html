@@ -1,6 +1,62 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
+<style>
+.header {
+background-color: #f1f1f1;
+padding: 20px;
+text-align: center;
+}
+
+/* নেভিগেশন বার স্টাইলিং */
+.navbar {
+overflow: hidden;
+background-color: #333;
+}
+
+/* নেভিগেশন লিংকগুলোর স্টাইলিং */
+.navbar a {
+float: left;
+display: block;
+color: white;
+text-align: center;
+padding: 14px 20px;
+text-decoration: none;
+}
+
+/* মেনু বাটন স্টাইলিং */
+.menu-btn {
+float: right;
+display: block;
+color: white;
+text-align: center;
+padding: 14px 20px;
+text-decoration: none;
+background-color: #04AA6D; /* বাটনের জন্য ব্যাকগ্রাউন্ড কালার */
+}
+
+/* লিংকগুলোর উপর মাউস নিয়ে গেলে রঙ পরিবর্তন */
+.navbar a:hover, .menu-btn:hover {
+background-color: #ddd;
+color: black;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+<h1>মাই ওয়েবসাইট</h1>
+<p>মাই ওয়েবসাইটে স্বাগতম।</p>
+</div>
+
+<div class="navbar">
+<a href="#home">হোম</a>
+<a href="#news">নিউজ</a>
+<a href="#contact">কন্ট্যাক্ট</a>
+<a href="#about">আবাউট</a>
+<a href="javascript:void(0);" class="menu-btn">মেনু</a>
+</div>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>COXS AURA</title>
