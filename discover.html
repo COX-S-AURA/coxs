@@ -1,6 +1,59 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
+<style>
+.header {
+background-color: #f1f1f1;
+padding: 20px;
+text-align: center;
+}
+
+/* নেভিগেশন বার স্টাইলিং */
+.navbar {
+overflow: hidden;
+background-color: #333;
+}
+
+/* নেভিগেশন লিংকগুলোর স্টাইলিং */
+.navbar a {
+float: left;
+display: block;
+color: white;
+text-align: center;
+padding: 14px 20px;
+text-decoration: none;
+}
+
+/* মেনু বাটন স্টাইলিং */
+.menu-btn {
+float: right;
+display: block;
+color: white;
+text-align: center;
+padding: 14px 20px;
+text-decoration: none;
+background-color: #04AA6D; /* বাটনের জন্য ব্যাকগ্রাউন্ড কালার */
+}
+
+/* লিংকগুলোর উপর মাউস নিয়ে গেলে রঙ পরিবর্তন */
+.navbar a:hover, .menu-btn:hover {
+background-color: #ddd;
+color: black;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+<h1>COX'S AURA</h1>
+<p>Your Gateway to the Grandeur of Cox'sBazar</p>
+</div>
+
+<div class="navbar">
+<a href="index.html">Home</a>
+<a href="Islands .html">Islands</a>
+</div>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>COXS AURA</title>
@@ -9,17 +62,248 @@
 </style>
   <script src="script.js"></script>
 </head>
+<html>
+<head>
+<style>
+* {box-sizing:border-box}
+
+/* স্লাইডার কন্টেইনার */
+.slideshow-container {
+max-width: 1000px;
+position: relative;
+margin: auto;
+}
+
+/* স্লাইডগুলি লুকানো */
+.mySlides {
+display: none;
+}
+
+/* প্রতিটি স্লাইডের জন্য ক্যাপশন */
+.text {
+color: #f2f2f2;
+font-size: 15px;
+padding: 8px 12px;
+position: absolute;
+bottom: 8px;
+width: 100%;
+text-align: center;
+}
+/* প্রতিটি স্লাইডের জন্য নাম্বার টেক্সট (1/3 ইত্যাদি) */
+.numbertext {
+color: #f2f2f2;
+font-size: 12px;
+padding: 8px 12px;
+position: absolute;
+top: 0;
+}
+
+/* প্রতিটি স্লাইডের জন্য অ্যানিমেশন */
+.fade {
+-webkit-animation-name: fade;
+-webkit-animation-duration: 1.5s;
+animation-name: fade;
+animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+from {opacity: .4} 
+to {opacity: 1}
+}
+
+@keyframes fade {
+from {opacity: .4} 
+to {opacity: 1}
+}
+
+/* পরবর্তী এবং পূর্ববর্তী বাটন */
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 50%;
+width: auto;
+margin-top: -22px;
+padding: 16px;
+color: white;
+font-weight: bold;
+font-size: 18px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+user-select: none;
+}
+
+/* ডান দিকের বাটনের জন্য অবস্থান */
+.next {
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+
+/* বাটনের উপর মাউস নিয়ে গেলে রঙ পরিবর্তন */
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+}
+
+/* ডটস/ইন্ডিকেটর */
+.dot {
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+background-color: #717171;
+}
+
+/* ফেড অ্যানিমেশনের জন্য */
+.fade {
+-webkit-animation-name: fade;
+-webkit-animation-duration: 1.5s;
+animation-name: fade;
+animation-duration: 1.5s;
+}
+
+</style>
+	
+</head>
 <body>
 
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+<div class="numbertext">1 / 3</div>
+<img src="beach1.jpg" style="width:100%">
+<div class="text">Your Beach, Your Adventure, Our Service- Cox's Aura</div>
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">2 / 3</div>
+<img src="beach2.jpg" style="width:100%">
+<div class="text">The Essence of Cox'sBazar</div>
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">3 / 3</div>
+<img src="beach3.jpg" style="width:100%">
+<div class="text">The longest sea beach in the world</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+<span class="dot" onclick="currentSlide(1)"></span> 
+<span class="dot" onclick="currentSlide(2)"></span> 
+<span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// পরবর্তী/পূর্ববর্তী নিয়ন্ত্রণ
+function plusSlides(n) {
+showSlides(slideIndex += n);
+}
+
+// ইমেজ ডটস নিয়ন্ত্রণ
+function currentSlide(n) {
+showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+var i;
+var slides = document.getElementsByClassName("mySlides");
+var dots = document.getElementsByClassName("dot");
+if (n > slides.length) {slideIndex = 1}    
+if (n < 1) {slideIndex = slides.length}
+for (i = 0; i < slides.length; i++) {
+slides[i].style.display = "none";  
+}
+for (i = 0; i < dots.length; i++) {
+dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex-1].style.display = "block";  
+dots[slideIndex-1].className += " active";
+}
+</script>
+
+<body>
+<div class="header">
+<h1>Discover COX'S BAZAR</h1>
+<h2>Cox’s Bazar is a coastal town and a district in the southeast of Bangladesh.</h2>
+<h2>It is famous for its long natural sandy beach, which stretches for 120 km and is the longest natural sea beach in the world.</h2>
+<h2>Cox’s Bazar is also known for its scenic beauty, diverse wildlife, and rich cultural heritage.</h2>
+<h2>Cox’s Bazar was named after Captain Hiram Cox, a British officer who served in the region in the 18th century.</h2>
+<h2>He established a market and a settlement for the local people, who were mostly fishermen and refugees from Arakan, now known as Rakhine State in Myanmar.</h2>
+<h3>Cox’s Bazar was a part of the Chittagong Division until 1984, when it became a separate district.</h3>
+<h3>Cox’s Bazar is a popular tourist destination for both domestic and foreign visitors.</h3>
+<h3>It offers a variety of attractions and activities, such as sunbathing, swimming, surfing, fishing, boating, hiking, biking, golfing, and shopping.</h3>
+<h3>Cox’s Bazar is also home to several historical and religious sites, such as the Aggmeda Khyang, a Buddhist monastery, the Ramu, a village with Buddhist temples and statues, and the Himchari, a waterfall and a Hindu temple.</h3>
+<h3>Cox’s Bazar is also a gateway to explore the nearby islands and coral reefs, such as the Sonadia Island, the Moheshkhali Island, the Kutubdia Island, the St. Martin’s Island, and the Teknaf Peninsula.</h3>
+<h3>These places offer stunning views of the sea, the mountains, and the forests, as well as opportunities to see rare and endangered species of animals and plants, such as the olive ridley turtles, the Irrawaddy dolphins, the saltwater crocodiles, and the mangroves.</h3>
+<h3>Cox’s Bazar is a place where you can experience the best of nature, culture, and adventure.</h3>
+<h3>It is a place where you can relax, rejuvenate, and rediscover yourself.</h3>
+<h3>It is a place where you can find your own aura</h3>
+</div>
+<div class="header">
+<h1>Experiences</h1>
+<h2>Cox’s Bazar offers a range of experiences for every type of traveler.</h2>
+<h3>Whether you are looking for a romantic getaway, a family vacation, a solo adventure, or a group excursion, you can find something that suits your taste and budget.</h3>
+<h2>Here are some of the experiences that you can enjoy on Cox’s Bazar</h2>
+</div>
+<div class="header">
+<h1>Beach Resorts</h1>
+<h3>Cox’s Bazar has a variety of beach resorts that cater to different needs and preferences.</h3>
+<h3>You can choose from luxury, mid-range, or budget-friendly options, and enjoy the facilities and services that they offer.</h3>
+<h3>Some of the amenities that you can expect from the beach resorts include comfortable rooms, swimming pools, spas, restaurants, bars, gyms, and entertainment.</h3>
+<h3>You can also enjoy the stunning views of the beach and the sea, and access the beach directly from your resort</h3>
+</div>
+<div class="header">
+<h1>Water Sports</h1>
+<h3>Cox’s Bazar is a paradise for water sports enthusiasts.</h3>
+<h3>You can try surfing, snorkeling, scuba diving, jet skiing, parasailing, banana boating, and more.</h3>
+<h3>You can also join a boat tour or a cruise to explore the nearby islands and reefs, and see the marine life and the scenery.</h3>
+<h3>You can also go fishing or crab hunting, and enjoy the fresh catch of the day.</h3>
+<h3>You can find many operators and instructors who can help you with the equipment and the safety measures.</h3>
+</div>
+<div class="header">
+<h1>Nature and Wildlife</h1>
+<h3>Cox’s Bazar is not only about the beach and the sea.</h3>
+<h3>It is also a place where you can discover the beauty and diversity of nature and wildlife.</h3>
+<h3>You can visit the Himchari National Park, which is a forested hill with a waterfall, a lake, and a Hindu temple.</h3>
+<h3>You can also visit the Inani Beach, which is a rocky beach with coral formations and colorful stones.</h3>
+<h3>You can also visit the Teknaf Wildlife Sanctuary, which is a protected area that hosts various species of animals and birds, such as the Asian elephants, the leopards, the gibbons, the hornbills, and the kingfishers.</h3>
+</div>
+<div class="header">
+<h1>Culture and Heritage</h1>
+<h3>Cox’s Bazar is a place where you can learn about the history and culture of the local people, who are mostly of Bengali, Rakhine, and Chakma origin.</h3>
+<h3>You can visit the Aggmeda Khyang, which is a large Buddhist monastery with a library and a prayer hall.</h3>
+<h3>You can also visit the Ramu, which is a village with several Buddhist temples and statues, some of which are made of gold.</h3>
+<h3>You can also visit the 100 Feet Buddha, which is a giant statue of Buddha that overlooks the sea.</h3>
+<h3>You can also experience the local cuisine, which is influenced by the seafood, the coconut, and the spices</h3>
+</div>
+<div class="header">
+<h1>Events and Festivals</h1>
+<h3>Cox’s Bazar is a place where you can join the celebrations of various events and festivals that reflect the religious and cultural diversity of the region.</h3>
+<h3>You can witness the Buddhist festivals, such as the Buddha Purnima, the Kathin Chibor Dan, and the Maghi Purnima, which are marked by prayers, processions, and offerings.</h3>
+<h3>You can also witness the Hindu festivals, such as the Durga Puja, the Kali Puja, and the Rath Yatra, which are marked by rituals, dances, and music.</h3>
+<h3>You can also witness the Muslim festivals, such as the Eid ul-Fitr, the Eid ul-Adha, and the Muharram, which are marked by prayers, charity, and fasting.</h3>
+</div>
 <header>
-<h1>DISCOVER COX'S BAZAR</h1>
 <nav>
 <style>
 .navbar {
 overflow: hidden;
 background-color: #333;
 }
-
 .navbar a {
 float: left;
 display: block;
@@ -28,7 +312,6 @@ text-align: center;
 padding: 14px 16px;
 text-decoration: none;
 }
-
 .navbar a:hover {
 background-color: #ddd;
 color: black;
@@ -36,88 +319,84 @@ color: black;
 </style>
 </head>
 <body>
-
-<div class="navbar">
-<a href="index1.html">Home</a>
-<a href="Islands.html">Island</a>
-<a href="#about">Romance</a>
-<a href="Romance.html">SPA</a>
-<a href="#about">Hotel Booking</a>
-<a href="#about">Restaurant</a>
-<a href="#about">Bar Club</a>
-<a href="solo.html">SOLO</a>
 </div>
 
+<p class="center">Are you ready to experience the magic of Cox's Bazar, the
+longest sea beach in the world? If so, you have come to the right place. Cox's
+Aura is your ultimate guide to everything that Cox's Bazar has to offer.
+Whether you are looking for a relaxing getaway, a thrilling adventure, or a
+cultural exploration, we have something for everyone. Cox's Aura is more than
+just a website, it's a lifestyle. Join us and discover the best of Cox's Bazar
+with Cox's Aura<a href="discover.html">Read More</a></p>
+<img src="discover.jpg" style="width:100%">
+</div>
 <div style="padding:16px">
-<h2>The longest sea beach in the world</h2>
-<p>Cox's Bazar is a coastal town in the southeast of Bangladesh, famous for its long sandy beach, the longest natural sea beach in the world. It is also a gateway to explore the nearby islands, forests, hills, and wildlife. Whether you are looking for relaxation, adventure, culture, or nature, Cox's Bazar has something for everyone.</p>
+<h1>Discover Cox's Bazar</h1>
+<p>Cox's Bazar is a destination for everyone. Whether you are looking for a relaxing getaway, a cultural immersion, or an adventurous thrill, you will find something to suit your taste and budget in this coastal paradise. Here are some of the types of travelers who can enjoy Cox's Bazar with Cox's Aura<a href=discover.html">Read More</a></p>
+<img src="dis206.jpg" style="width:100%">
 </div>
-</nav>
-</header>
-</style>
-
-</head>
-<h1>The longest sea beach in the world</h1>
-<body lang=EN-US style='word-wrap:break-word'>
-
-<div class=WordSection1>
-
-<p class=MsoTitle>Cox's Aura: The Best Way to Experience Cox's Bazar Sea Beach</p>
-
-<p class=MsoSubtitle>A comprehensive service website that offers everything you
-need to enjoy the beauty and adventure of Cox's Bazar, the longest sea beach in
-the world.</p>
-</section>
-  <img src="th.jpg" alt="সুন্দর সমুদ্র সৈকত" width="350" height="250">
-<section id="spa">
-<h1>Welcome to Cox's Bazar</h1>
-
-<p class=MsoNormal>Are you ready to experience the magic of Cox's Bazar, the
-longest sea beach in the world? If so, you have come to the right place. Cox's
-Aura is your ultimate guide to everything that Cox's Bazar has to offer.
-Whether you are looking for a relaxing getaway, a thrilling adventure, or a
-cultural exploration, we have something for everyone. Cox's Aura is more than
-just a website, it's a lifestyle. Join us and discover the best of Cox's Bazar
-with Cox's Aura.</p>
-
-<h2>Discover Cox's Bazar</h2>
-	<h1>FAMILIES</h1>
-	<h1>FOODIES</h1>
-	<h1>CULTURE & HISTORY AFICIONADOS</h1>
-	<h1>NATURE LOVERS</h1>
-	<h1>SOLO TRAVELERS</h1>
-	<h1>SOLO GIRLS</h1>
-	<h1>SOLO BOYS</h1>
-	<h1>FIRST-TIMERS</h1>
-	<h1>ROMANCE SEEKERS</h1>
-	<h1>OUTDOOR ADVENTURERS</h1>
-	<h1>SHOPPERS</h1>
-	<h1>HEALTH & WELLNESS ENTHUSLASTS</h1>
-
-<p class=MsoNormal>Are you ready to experience the magic of Cox's Bazar, the
-longest sea beach in the world? If so, you have come to the right place. Cox's
-Aura is your ultimate guide to everything that Cox's Bazar has to offer.
-Whether you are looking for a relaxing getaway, a thrilling adventure, or a
-cultural exploration, we have something for everyone. Cox's Aura is more than
-just a website, it's a lifestyle. Join us and discover the best of Cox's Bazar
-with Cox's Aura.</p>
-
-
-<h1>Why Choose Cox's Aura?</h1>
-	<img src="beach1.jpg" alt="সমুদ্র সৈকত" width="350" height="250">
-<p class=MsoNormal>We are a one-stop platform that connects you with the best
-travel agents, hotels, restaurants, bars, clubs, spas, and other services in
-Cox's Bazar. We offer competitive prices, flexible packages, and personalized
-recommendations based on your preferences and budget. When you book with us,
-you can rest assured that you will receive quality, safety, and satisfaction
-for every service you choose. We have a dedicated customer support team that is
-available 24/7 to assist you with any queries or issues. But don't take our
-word for it, see what our customers have to say about us on our testimonials
-page.</p>
-
-<h1>What Services Do We Offer?</h1>
-	<img src="beach2.jpg" alt="সৈকত" width="350" height="250">
-	<h2>Travel Agent</h2>
+<div style="padding:16px">
+<h2>Families</h2>
+<p>Cox's Bazar is a family-friendly destination, with plenty of activities and attractions for kids and adults alike. You can enjoy the sandy beaches, the water park, the amusement park, the aquarium, and the wildlife sanctuary. You can also take a boat ride to the nearby islands, where you can snorkel, fish, or picnic. Cox's Aura offers family rooms, babysitting services, and special packages for families.<a href="families.html">Read More</a></p>
+<img src="families.jpg" style="width:100%">
+</div>
+<div style="padding:16px">
+<h2>Foodies</h2>
+<p>Cox's Bazar is a food lover's dream, with a variety of cuisines and dishes to satisfy your cravings. You can sample the local delicacies, such as fried fish, crab curry, prawn malai, and biryani. You can also try the international options, such as Thai, Chinese, Indian, and Italian. Cox's Aura has a restaurant, a cafe, and a bar, where you can enjoy delicious meals, snacks, and drinks.<a href="food.html">Read More</a></p>
+<img src="foodies100.jpg" style="width:100%">
+</div>
+<div style="padding:16px">
+<h1>Culture & History Aficionados</h1>
+<p class=MsoNormal>Cox's Bazar has a rich and diverse history and culture, dating back to ancient times. You can explore the heritage sites, such as the Buddhist temples, the 100-year-old mosque, the colonial buildings, and the fishermen's village. You can also learn about the local customs, traditions, and festivals, such as the Rash Mela, the kite festival, and the fishing competition. Cox's Aura can arrange guided tours, cultural shows, and workshops for you.<a href="culture.html">Read More</a></p>
+<img src="natural100.jpg" style="width:100%">
+</div>
+<div style="padding:16px">
+<h1>Nature Lovers</h1>
+<p class=MsoNormal>Cox's Bazar is a nature lover's paradise, with stunning landscapes and diverse wildlife. You can admire the longest natural sea beach in the world, the lush green hills, the turquoise sea, and the colorful coral reefs. You can also spot the rare and endangered animals, such as the Irrawaddy dolphins, the olive ridley turtles, the saltwater crocodiles, and the migratory birds. Cox's Aura can organize nature walks, wildlife safaris, and eco-tours for you<a href="nature.html">Read More</a></p>
+<img src="dis206.jpg"style="width:100%">
+</div>
+<div style="padding:16px">
+<h1>Solo Travelers</h1>
+<p class=MsoNormal>Cox's Bazar is a safe and friendly destination for solo travelers, with plenty of opportunities to meet new people and have fun. You can mingle with the locals, the other tourists, and the Cox's Aura staff, who will make you feel welcome and comfortable. You can also join the group activities, such as the yoga classes, the karaoke nights, and the beach parties. Cox's Aura offers single rooms, free Wi-Fi, and 24/7 security for solo travelers.<a href="solo.html">Read More</a></p>
+<img src="solo100.jpg" style="width:100%">
+</div>
+<div style="padding:16px">
+<h3>First-Timers</h3>
+<p class=MsoNormal>Cox's Bazar is a perfect destination for first-timers>, who want to experience the best of Bangladesh. You can enjoy the scenic beauty, the cultural diversity, the culinary delights, and the warm hospitality of Cox's Bazar. You can also get a glimpse of the other attractions of Bangladesh, such as the Sundarbans, the Chittagong Hill Tracts, and the Dhaka city. Cox's Aura offers airport transfers, travel assistance, and information for first-timers.<a href="first.html">Read More</a></p>
+<img src="dis1000.jpg" style="width:100%">
+</div>
+<div style="padding:16px">
+<h3>Romance Seekers</h3>
+<p class=MsoNormal>Cox's Bazar is a romantic destination for couples, who want to spend some quality time together. You can relax on the private beach, watch the sunset, or take a candlelit dinner. You can also pamper yourselves with a spa treatment, a massage, or a jacuzzi. Cox's Aura offers honeymoon suites, romantic packages, and special arrangements for couples.<a href="romance.html">Read More</a></p>
+<img src="romanceboli.jpg" style="width:100%">
+</div>
+<div style="padding:16px">
+<h3>Outdoor Adventurers</h3>
+<p class=MsoNormal>Cox's Bazar is an adventurous destination for thrill-seekers, who want to challenge themselves and have some fun. You can try the various water sports, such as surfing, jet skiing, parasailing, and scuba diving. You can also go for the land activities, such as hiking, biking, ziplining, and camping. Cox's Aura offers equipment rental, training, and guidance for outdoor adventurers<a href="outdoor.html">Read More</a></p>
+<img src="romancegirlboykole.jpg" style="width:100%">
+</div>
+<div style="padding:16px">
+<h3>Shoppers</h3>
+<p class=MsoNormal>Cox's Bazar is a shopper's paradise, with a range of products and prices to suit your needs and preferences. You can shop for the local handicrafts, such as the bamboo baskets, the jute bags, the pottery, and the jewelry. You can also shop for the branded items, such as the clothes, the accessories, the electronics, and the souvenirs. Cox's Aura has a gift shop, a convenience store, and a shuttle service for shoppers.<a href="shopper.html">Read More</a></p>
+<img src="shoppers1.jpg" style="width:100%">
+</div>
+<div style="padding:16px">
+<h3>Health & Wellness Enthuslasts</h3>
+<p class=MsoNormal>Cox's Bazar is a health and wellness destination for those who want to rejuvenate their body, mind, and soul. You can practice yoga, meditation, or tai chi on the beach, or join the fitness center or the swimming pool. You can also detox your system with the organic food, the herbal tea, or the fresh juice. Cox's Aura has a wellness center, a spa, and a health club for health and wellness enthusiasts.<a href="health.html">Read More</a></p>
+<img src="soloboy.jpg" style="width:100%">
+</div>
+<div style="padding:16px">
+<h3>Nightlife Lovers</h3>
+<p class=MsoNormal>Cox's Bazar is a nightlife destination for those who want to party and have a good time. You can enjoy the live music, the DJ, the karaoke, or the dance floor at the bar club. You can also sip on the cocktails, the mocktails, the beer, or the wine at the lounge. Cox's Aura has a bar club, a lounge, and a happy hour for nightlife lovers<a href="night.html">Read More</a></p>
+<img src="night201.jpg" style="width:100%">
+</div>
+<div style="padding:16px">
+<h3>SPA</h3>
+<p class=MsoNormal>Cox's Bazar is a spa destination for those who want to relax and pamper themselves. You can choose from a variety of treatments, such as the massage, the facial, the manicure, or the pedicure. You can also indulge in the aromatherapy, the hydrotherapy, or the sauna. Cox's Aura has a spa, a beauty salon, and a steam room for spa lovers.<a href="spa.html">Read More</a></p>
+<img src="spg.jpg" style="width:100%">
+</div>
+<div style="padding:16px">
+<h3>Rooms & Suites</h3>
 <p class=MsoNormal>Planning a trip to Cox's Bazar can be
 challenging, especially if you are not familiar with the destination. That's
 why we have a team of experienced and professional travel agents who can help
@@ -126,359 +405,60 @@ trains, to arranging your visa, insurance, and local transportation. They will
 also give you tips and advice on how to make the most of your time in Cox's
 Bazar, and what to expect when you arrive. You can trust them to take care of
 all the details, so you can focus on enjoying your trip. Some of the benefits
-of booking with our travel agents are:</p>
-	
-<p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You can save time and money by letting them
-find the best deals and options for you.</p>
-	<img src="beach3.jpg" alt="সুন্দর সমুদ্র সৈকত" width="350" height="250">
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You can avoid the hassle and stress of
-booking and managing your travel yourself.</p>
+of booking with our travel agents<a href="room.html">Read More</a></p>
+<img src="spr.jpeg" style="width:100%">
+</div>
+<div style="padding:16px">
+<h3>Meetings & Events</h3>
+<p class=MsoNormal>Cox's Bazar is a meetings and events destination for those who want to host or attend professional or social gatherings. You can book the conference hall, the banquet hall, or the meeting room for your business or personal needs. You can also avail the catering, the audiovisual, or the internet services for your convenience. Cox's Aura has a meetings and events center, a business center, and a secretarial service for meetings and events.<a href="meeting.html">Read More</a></p>
+<img src="event.jpg" style="width:100%">
+</div>
+<div style="padding:16px">
+<h3>Recreation</h3>
+<p class=MsoNormal>Cox's Bazar is a recreation destination for those who want to have fun and enjoy various activities. You can play the golf, the tennis, or the badminton at the sports center. You can also explore the marine park, the fishing village, or the Buddhist temple at the nearby attractions. Cox's Aura has a recreation center, a sports center, and a tour desk for recreation<a href="recreation.html">Read More</a></p>
+<img src="recreationgirl.jpg" style="width:100%">
+</div>
+<div style="padding:16px">
+<h3>Special Offers</h3>
+<p class=MsoNormal>Cox's Bazar is a special offers destination for those who want to save money and get the best deals. You can benefit from the discounts, the packages, or the vouchers for your stay. You can also get the freebies, the upgrades, or the rewards for your loyalty. Cox's Aura has a special offers page, a loyalty program, and a gift shop for special offers.<a href="special.html">Read More</a></p>
+<img src="special100.jpg" style="width:100%">
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You can get access to exclusive offers and
-discounts that are not available elsewhere.</p>
-	<img src="beach5.jpg" alt="সুন্দর সমুদ্র সৈকত" width="350" height="250">
-<p class=MsoListParagraphCxSpLast style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You can get expert guidance and support
-throughout your trip, from departure to arrival.</p>
-	<img src="beach6.jpg" alt="সুন্দর সমুদ্র সৈকত" width="350" height="250">
-	<h2>Hotel Booking</h2>
-<p class=MsoNormal>Finding the right accommodation in Cox's
-Bazar can be overwhelming, given the variety of options available. That's why
-we have partnered with the best hotels in Cox's Bazar, ranging from
-budget-friendly guesthouses to luxury resorts. You can compare prices, ratings,
-amenities, and availability, and book your stay with just a few clicks. You can
-also check out the photos and videos of the hotels, and see how they look in
-real life. No matter what your taste and style, we have the perfect hotel for
-you. Some of the benefits of booking with our hotels are:</p>
-	<img src="beach7.jpg" alt="সুন্দর সমুদ্র সৈকত" width="350" height="250">
-
-<p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You can enjoy a comfortable and clean room
+<div class="navbar">
+<a href="#about">Romance</a>
+<a href="spa.html">SPA</a>
+<a href="#about">Room Booking</a>
+<a href="#about">Restaurant</a>
+<a href="#about">Bar Club</a>
+<a href="solo.html">Solo Travelers</a>
+</div>
+<div style="padding:16px">
+<h3>Gallery</h3>
+<p class=MsoNormal>They will
+also give you tips and advice on how to make the most of your time in Cox's
+Bazar, and what to expect when you arrive. You can trust them to take care of
+all the details, so you can focus on enjoying your trip. Some of the benefits
+of booking with our travel agents</p>
+<img src="beach3.jpg" style="width:100%">
+<img src="beach5.jpg" style="width:100%">
+<img src="beach6.jpg" style="width:100%">
+<img src="beach7.jpg" style="width:100%">
+</div>
+<div style="padding:16px">
+<p>You can enjoy a comfortable and clean room
 with all the facilities and services you need.</p>
-
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You can experience the hospitality and
-friendliness of the hotel staff and management.</p>
-
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You can take advantage of the hotel's
-features and amenities, such as swimming pool, gym, spa, restaurant, bar, etc.</p>
-
-<p class=MsoListParagraphCxSpLast style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You can get free breakfast, wifi, parking,
-and other perks when you book through us.</p>
-	
-	<h2>Restaurant Service</h2>
-<p class=MsoNormal>Eating out in Cox's Bazar can be a
-delight, as you can sample a variety of cuisines, from local seafood to
-international dishes. That's why we have curated a list of the best restaurants
-in Cox's Bazar, where you can enjoy delicious food and excellent service. You
-can browse menus, reviews, photos, and locations, and reserve your table
-online. You can also get exclusive discounts and offers when you book through
-us. Whether you are in the mood for a romantic dinner, a family feast, or a solo
-snack, we have the right restaurant for you. Some of the benefits of booking
-with our restaurants are:</p>
-
-<p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You can taste the freshness and quality of
-the ingredients and the dishes.</p>
-
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You can savor the flavors and aromas of the
-different cuisines and specialties.</p>
-
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You can enjoy the ambiance and atmosphere of
-the restaurant, whether it's cozy, elegant, or lively.</p>
-
-<p class=MsoListParagraphCxSpLast style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You can get complimentary drinks, desserts,
-or appetizers when you book through us.</p>
-
-	<h2>Bar Club</h2>
-<p class=MsoNormal>Having fun in Cox's Bazar can be easy, as you can
-find many bars and clubs where you can enjoy music, drinks, and dancing. That's
-why we have selected the most popular and lively bars and clubs in Cox's Bazar,
-where you can meet new people and have a great time. You can check out the
-events, promotions, and dress codes, and book your entry online. You can also
-get access to VIP areas and free drinks when you book through us. Whether you
-are looking for a night of partying, a chill hangout, or a live show, we have
-the right bar or club for you. Some of the benefits of booking with our bars
-and clubs are:</p>
-
-<p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You can have fun and entertainment with the
-music, lights, and sounds of the bar or club.</p>
-
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You can mingle and socialize with the locals
-and other tourists who share your vibe and interests.</p>
-
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You can drink and dance to your heart's
-content, without worrying about the price or the quality.</p>
-
-<p class=MsoListParagraphCxSpLast style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You can skip the line, avoid the cover
-charge, and get the best seats when you book through us.</p>
-
-	<h2>SPA</h2>
-<p class=MsoNormal>Relaxing in Cox's Bazar can be a treat, as you can find
-many spas where you can pamper yourself with massages, facials, manicures,
-pedicures, and more. That's why we have featured the most relaxing and
-rejuvenating spas in Cox's Bazar, where you can unwind and refresh your body
-and mind. You can view the services, prices, and ratings, and book your
-appointment online. You can also get special deals and packages when you book
-through us. Whether you need a full-body massage, a facial treatment, or a nail
-polish, we have the right spa for you. Some of the benefits of booking with our
-spas are:</p>
-
-<p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You can relieve your stress and tension with
-the gentle and soothing touch of the therapists.</p>
-
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You can restore your beauty and glow with
-the natural and organic products and treatments.</p>
-
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You can indulge your senses and emotions
-with the aromatherapy, music, and candles of the spa.</p>
-
-<p class=MsoListParagraphCxSpLast style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You can get a free consultation, a welcome
-drink, and a gift bag when you book through us.</p>
-
-<p class=MsoNormal>Others: Exploring Cox's Bazar can be an adventure, as you
-can find many activities that can enhance your experience, such as water
-sports, fishing, hiking, sightseeing, and more. That's why we have also
-included other services that can make your vacation more memorable and
-exciting. You can explore the options, read the descriptions, and book your
-activity online. You can also get discounts and freebies when you book through
-us. Whether you want to surf the waves, catch a fish, climb a hill, or visit a temple,
-we have the right activity for you. Some of the benefits of booking with our
-other services are:</p>
-
-<p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You can have fun and challenge yourself with
-the different activities and adventures.</p>
-
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You can discover and appreciate the natural
-and cultural wonders of Cox's Bazar and its surroundings.</p>
-
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You can learn and develop new skills and
-hobbies with the guidance and equipment of the instructors and operators.</p>
-
-<p class=MsoListParagraphCxSpLast style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You can get free transportation, snacks, and
-souvenirs when you book through us.</p>
-
-<h1>Benefits for Solo Travelers</h1>
-
-<p class=MsoNormal>If you are traveling alone to Cox's Bazar, you might be
-wondering if you can enjoy the destination as much as if you were with someone
-else. The answer is yes, you can. In fact, there are many benefits of traveling
-solo to Cox's Bazar, and we are here to help you make the most of them. Some of
-the benefits of traveling solo to Cox's Bazar are:</p>
-
-<p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You can have more freedom and flexibility.
-You can decide when, where, and how to travel, without having to compromise or
-negotiate with anyone else. You can also change your plans or itinerary as you
-wish, depending on your mood and interests.</p>
-
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You can have more opportunities and
-experiences. You can try new things, meet new people, and learn new cultures,
-without being influenced or limited by anyone else. You can also challenge
-yourself and step out of your comfort zone, and discover more about yourself
-and the world.</p>
-
-<p class=MsoListParagraphCxSpLast style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You can have more savings and value. You can
-save money by choosing the services and activities that suit your budget and
-preference, without having to split the costs or pay extra fees with anyone
-else. You can also get more value by booking with us, as we offer special
-discounts and deals for solo travelers.</p>
-
-<p class=MsoNormal>But traveling solo doesn't mean traveling alone. You can
-always find company and support in Cox's Bazar, whether it's from our friendly
-and helpful staff, our professional and reliable service providers, or our
-welcoming and diverse community of travelers. You can also join our group tours
-and events, where you can meet and connect with other solo travelers who share
-your passion and curiosity for Cox's Bazar. You can also reach out to us
-anytime if you need any assistance or advice. We are always here for you.</p>
-
-<h2>Benefits for Solo Girls</h2>
-
-<p class=MsoNormal>If you are a solo girl traveling to Cox's Bazar, you might
-have some concerns or doubts about your safety and comfort. We understand that,
-and we want to assure you that Cox's Bazar is a safe and friendly destination
-for solo girls. We have taken extra measures to ensure that you can enjoy your
-trip without any worries or hassles. Some of the benefits of traveling solo as
-a girl to Cox's Bazar are:</p>
-
-<p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You can feel safe and secure with our
-female-friendly services and facilities. We have selected the hotels,
-restaurants, bars, clubs, spas, and other services that are respectful and
-welcoming to solo girls. We have also provided female-only options, such as
-rooms, taxis, guides, and tours, where you can feel more comfortable and
-relaxed.</p>
-
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You can feel empowered and inspired by the
-local women and culture. Cox's Bazar is home to many inspiring and successful
-women, who are involved in various fields and sectors, such as tourism,
-education, health, environment, and social work. You can meet and interact with
-them, and learn from their stories and experiences. You can also appreciate the
-rich and diverse culture of Cox's Bazar, which celebrates and respects women
-and their roles.</p>
-
-<p class=MsoListParagraphCxSpLast style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You can feel pampered and spoiled by the
-special treats and surprises we have for you. We have arranged some exclusive
-offers and gifts for solo girls, such as spa vouchers, beauty products,
-jewelry, and more. You can also enjoy some special events and activities that
-are designed for solo girls, such as yoga sessions, cooking classes, shopping
-tours, and more.</p>
-
-<h2>Benefits for Solo Boys</h2>
-
-<p class=MsoNormal>If you are a solo boy traveling to Cox's Bazar, you might be
-looking for some fun and adventure. We have that, and more. We have prepared
-some amazing and exciting services and activities for solo boys, that will make
-your trip unforgettable and enjoyable. Some of the benefits of traveling solo
-as a boy to Cox's Bazar are:</p>
-
-<p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You can feel adventurous and thrilled with
-our action-packed services and activities. We have selected the best water
-sports, fishing, hiking, sightseeing, and other activities that will challenge
-and entertain you. We have also provided the best equipment and instructors,
-who will ensure your safety and satisfaction.</p>
-
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You can feel social and connected with the
-local people and culture. Cox's Bazar is a friendly and lively destination,
-where you can meet and mingle with the locals and other tourists. You can also
-learn and appreciate the history and heritage of Cox's Bazar, which is rich and
-diverse. You can also enjoy the local cuisine and music, which are delicious
-and vibrant.</p>
-
-<p class=MsoListParagraphCxSpLast style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You can feel rewarded and appreciated by the
-special deals and bonuses we have for you. We have arranged some exclusive
-discounts and freebies for solo boys, such as drinks, snacks, tickets, and
-more. You can also enjoy some special events and activities that are designed
-for solo boys, such as sports tournaments, trivia nights, pub crawls, and more.</p>
-
-<h1>How to Use Our Website?</h1>
-
-<p class=MsoNormal>Using our website is simple and convenient. Just follow
-these steps:</p>
-
-<p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'>1.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
-dir=LTR></span>Visit our website at [URL] and create your account. It's free
-and easy, and it will give you access to all our services and offers.</p>
-
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'>2.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
-dir=LTR></span>Select the service you want to book from the menu bar. You can
-choose from travel agent, hotel booking, restaurant service, bar club, spa, or
-others.</p>
-
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'>3.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
-dir=LTR></span>Filter and sort the results according to your preferences and
-budget. You can use the filters to narrow down your search, and the sort
-options to rank the results by price, rating, popularity, or distance.</p>
-
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'>4.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
-dir=LTR></span>Click on the service you like and read the details and reviews.
-You can find all the information you need about the service, such as the
-features, benefits, terms and conditions, and customer feedback. You can also
-see the photos and videos of the service, and get a glimpse of what it looks
-like in reality.</p>
-
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'>5.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
-dir=LTR></span>Click on the book now button and enter your payment information.
-You can pay securely online using your credit card, debit card, or PayPal. You
-will receive an instant confirmation email with your booking details and
-instructions.</p>
-
-<p class=MsoListParagraphCxSpLast style='text-indent:-.25in'>6.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
-dir=LTR></span>Enjoy your service. You can now relax and enjoy your service,
-knowing that you have booked the best deal with the best quality. You can also
-contact us anytime if you need any help or support.</p>
-
-<h1>Contact Us</h1>
-
-<p class=MsoNormal>If you have any questions, feedback, or complaints, please
-contact us at [email address] or [phone number]. We are always happy to hear
-from you and to help you with any issue. You can also chat with us online using
-the chat box on our website.</p>
-
-<p class=MsoNormal>You can also follow us on [social media platforms] and share
-your experience with us. We love to see your photos and videos, and to read
-your stories and reviews. You can also join our community of Cox's Aura fans,
-and connect with other travelers who share your passion for Cox's Bazar.</p>
-
-<p class=MsoNormal>We appreciate your support and hope you have a wonderful
-time in Cox's Bazar with Cox's Aura.</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
 </div>
 <footer>
 <!-- ফুটার এরিয়া -->
 </footer>
 </body>
 <div class="navbar">
-<a href="contact.html">Contact</a>
-<a href="discover.html">About us</a>
 <a href="Terms.html">Terms and Conditions</a>
 <a href="Privacy.html">Privacy Policy</a>
+
+</div>
+<div style="padding:16px">
+<p class=MsoNormal>@2024 Cox's Aura. All right reserved.</p>
+</html>
+
+</body>
 </html>
