@@ -76,8 +76,11 @@ background-color: #4cae4c;
 <option value="bkash">বিকাশ</option>
 </select>
 </div>
-<form action="stripe.html" method="get">
-<input type="submit" value="অর্ডার সাবমিট করুন"></form>
-
+<button id="submitOrder">অর্ডার সাবমিট করুন</button>
+<script>
+document.getElementById('submitOrder').addEventListener('click', function() {
+window.location.href = 'stripe.html';
+});
+</script>
 </body>
 </html>
