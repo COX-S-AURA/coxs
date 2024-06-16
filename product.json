@@ -1,0 +1,29 @@
+{
+"productId": "12345",
+"productName": "ম্যাজিক মগ",
+"productDescription": "এই মগটি তাপমাত্রা পরিবর্তনের সাথে সাথে রঙ পরিবর্তন করে।",
+"price": 150.00,
+"currency": "BDT",
+"inStock": true,
+"details": {
+"material": "সিরামিক",
+"color": "কালো",
+"capacity": "300ml"
+},
+"images": [
+"images/magic-mug-front.jpg",
+"images/magic-mug-back.jpg"
+],
+"reviews": [
+{
+"username": "জন ডো",
+"rating": 5,
+"comment": "অসাধারণ প্রোডাক্ট!"
+},
+{
+"username": "জেন ডো",
+"rating": 4,
+"comment": "খুব ভালো লাগলো, কিন্তু আরও রঙের অপশন থাকলে ভালো হতো।"
+}
+]
+}
