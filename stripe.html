@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>পেমেন্ট গেটওয়ে</title>
+<!-- Stripe.js লাইব্রেরি লোড করা -->
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+// Stripe অবজেক্ট তৈরি করা হচ্ছে আপনার publishable key দিয়ে
+var stripe = Stripe('pk_live_51MFZhQBgMFiWzBktOM6vrDimFEe1EPF4RdngC20TxMW6SgnvsFlE03BE16aBjtATrvQaPypJ1aPL51fbltiNeavT00FkZ9kNHj');
+// Stripe Elements ইন্সট্যান্স তৈরি করা হচ্ছে
+var elements = stripe.elements();
+// বাকি কোড...
+</script>
+</head>
+<body>
+<h2>পেমেন্ট ফর্ম</h2>
+<form action="/your-server-side-code" method="post">
+<div id="card-element">
+<!-- Stripe.js এর মাধ্যমে ক্রেডিট কার্ড ফর্ম এখানে প্রদর্শিত হবে -->
+</div>
+<button type="submit">পেমেন্ট করুন</button>
+</form>
+<script>
+// ফর্ম সাবমিট হলে কি হবে তা হ্যান্ডেল করা
+var form = document.getElementById('payment-form');
+form.addEventListener('submit', function(event) {
+event.preventDefault();
+
+stripe.createToken(card).then(function(result) {
+if (result.error) {
+// এরর দেখানো হবে
+} else {
+// টোকেন আপনার সার্ভারে পাঠানো হবে
+}
+});
+});
+</script>
+</body>
+</html>
