@@ -1,234 +1,342 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="bn">
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
 <style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:Wingdings;
-	panose-1:5 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:"Aptos Display";}
-@font-face
-	{font-family:Aptos;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:8.0pt;
-	margin-left:0in;
-	line-height:115%;
-	font-size:12.0pt;
-	font-family:"Aptos",sans-serif;}
-h1
-	{mso-style-link:"Heading 1 Char";
-	margin-top:.25in;
-	margin-right:0in;
-	margin-bottom:4.0pt;
-	margin-left:0in;
-	line-height:115%;
-	page-break-after:avoid;
-	font-size:20.0pt;
-	font-family:"Aptos Display",sans-serif;
-	color:#0F4761;
-	font-weight:normal;}
-p.MsoTitle, li.MsoTitle, div.MsoTitle
-	{mso-style-link:"Title Char";
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:4.0pt;
-	margin-left:0in;
-	font-size:28.0pt;
-	font-family:"Aptos Display",sans-serif;
-	letter-spacing:-.5pt;}
-p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
-	{mso-style-link:"Title Char";
-	margin:0in;
-	font-size:28.0pt;
-	font-family:"Aptos Display",sans-serif;
-	letter-spacing:-.5pt;}
-p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
-	{mso-style-link:"Title Char";
-	margin:0in;
-	font-size:28.0pt;
-	font-family:"Aptos Display",sans-serif;
-	letter-spacing:-.5pt;}
-p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
-	{mso-style-link:"Title Char";
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:4.0pt;
-	margin-left:0in;
-	font-size:28.0pt;
-	font-family:"Aptos Display",sans-serif;
-	letter-spacing:-.5pt;}
-p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:8.0pt;
-	margin-left:.5in;
-	line-height:115%;
-	font-size:12.0pt;
-	font-family:"Aptos",sans-serif;}
-p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.5in;
-	line-height:115%;
-	font-size:12.0pt;
-	font-family:"Aptos",sans-serif;}
-p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.5in;
-	line-height:115%;
-	font-size:12.0pt;
-	font-family:"Aptos",sans-serif;}
-p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:8.0pt;
-	margin-left:.5in;
-	line-height:115%;
-	font-size:12.0pt;
-	font-family:"Aptos",sans-serif;}
-span.Heading1Char
-	{mso-style-name:"Heading 1 Char";
-	mso-style-link:"Heading 1";
-	font-family:"Aptos Display",sans-serif;
-	color:#0F4761;}
-span.TitleChar
-	{mso-style-name:"Title Char";
-	mso-style-link:Title;
-	font-family:"Aptos Display",sans-serif;
-	letter-spacing:-.5pt;}
-.MsoPapDefault
-	{margin-bottom:8.0pt;
-	line-height:115%;}
-@page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
-div.WordSection1
-	{page:WordSection1;}
- /* List Definitions */
- ol
-	{margin-bottom:0in;}
-ul
-	{margin-bottom:0in;}
--->
+.header {
+background-color: #f1f1f1;
+padding: 20px;
+text-align: center;
+}
+
+/* নেভিগেশন বার স্টাইলিং */
+.navbar {
+overflow: hidden;
+background-color: #333;
+}
+
+/* নেভিগেশন লিংকগুলোর স্টাইলিং */
+.navbar a {
+float: left;
+display: block;
+color: white;
+text-align: center;
+padding: 14px 20px;
+text-decoration: none;
+}
+
+/* মেনু বাটন স্টাইলিং */
+.menu-btn {
+float: right;
+display: block;
+color: white;
+text-align: center;
+padding: 14px 20px;
+text-decoration: none;
+background-color: #04AA6D; /* বাটনের জন্য ব্যাকগ্রাউন্ড কালার */
+}
+
+/* লিংকগুলোর উপর মাউস নিয়ে গেলে রঙ পরিবর্তন */
+.navbar a:hover, .menu-btn:hover {
+background-color: #ddd;
+color: black;
+}
 </style>
-
 </head>
+<body>
 
-<body lang=EN-US style='word-wrap:break-word'>
+<div class="header">
+<h1>COX'S AURA</h1>
+<p>Your Gateway to the Grandeur of Cox'sBazar</p>
+</div>
 
-<div class=WordSection1>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COXS AURA</title>
+<style>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</style>
+  <script src="script.js"></script>
+</head>
+<html>
+<head>
+<style>
+* {box-sizing:border-box}
 
-<p class=MsoTitle align=center style='text-align:center'>Cox's Aura</p>
+/* স্লাইডার কন্টেইনার */
+.slideshow-container {
+max-width: 1000px;
+position: relative;
+margin: auto;
+}
 
-<h1>Privacy Policy</h1>
+/* স্লাইডগুলি লুকানো */
+.mySlides {
+display: none;
+}
 
-<p class=MsoNormal>This privacy policy explains how we collect, use, and
-protect your personal information when you use our website or mobile
-application. By using our services, you agree to the terms of this policy.</p>
+/* প্রতিটি স্লাইডের জন্য ক্যাপশন */
+.text {
+color: #f2f2f2;
+font-size: 15px;
+padding: 8px 12px;
+position: absolute;
+bottom: 8px;
+width: 100%;
+text-align: center;
+}
+/* প্রতিটি স্লাইডের জন্য নাম্বার টেক্সট (1/3 ইত্যাদি) */
+.numbertext {
+color: #f2f2f2;
+font-size: 12px;
+padding: 8px 12px;
+position: absolute;
+top: 0;
+}
 
-<p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>We collect your personal information such as
-your name, email address, phone number, location, and payment details when you
-create an account, make a booking, or contact us. We also collect information
-about your device, browser, and usage patterns when you access our services.</p>
+/* প্রতিটি স্লাইডের জন্য অ্যানিমেশন */
+.fade {
+-webkit-animation-name: fade;
+-webkit-animation-duration: 1.5s;
+animation-name: fade;
+animation-duration: 1.5s;
+}
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>We use your personal information to provide
-you with our services, to communicate with you, to improve our services, to
-personalize your experience, to conduct marketing and research, and to comply
-with legal obligations.</p>
+@-webkit-keyframes fade {
+from {opacity: .4} 
+to {opacity: 1}
+}
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>We protect your personal information by
-using encryption, security software, and other measures to prevent unauthorized
-access, loss, or disclosure. We only share your personal information with third
-parties that are necessary for providing our services, such as our partners,
-vendors, and affiliates, or when required by law or regulation.</p>
+@keyframes fade {
+from {opacity: .4} 
+to {opacity: 1}
+}
 
-<p class=MsoListParagraphCxSpLast style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You have the right to access, modify,
-delete, or restrict your personal information at any time. You can also opt out
-of receiving marketing emails or notifications from us. You can exercise your
-rights by contacting us at [EMAIL] or through your account settings.</p>
+/* পরবর্তী এবং পূর্ববর্তী বাটন */
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 50%;
+width: auto;
+margin-top: -22px;
+padding: 16px;
+color: white;
+font-weight: bold;
+font-size: 18px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+user-select: none;
+}
 
-<h1>Terms and Conditions</h1>
+/* ডান দিকের বাটনের জন্য অবস্থান */
+.next {
+right: 0;
+border-radius: 3px 0 0 3px;
+}
 
-<p class=MsoNormal>These terms and conditions govern your use of our website
-and mobile application. By using our services, you agree to be bound by these
-terms and conditions.</p>
+/* বাটনের উপর মাউস নিয়ে গেলে রঙ পরিবর্তন */
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+}
 
-<p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You must be at least 18 years old and have
-the legal capacity to enter into a contract with us. You are responsible for
-your own account and for all activities that occur under your account. You must
-keep your password secure and notify us immediately if you suspect any
-unauthorized use of your account.</p>
+/* ডটস/ইন্ডিকেটর */
+.dot {
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You must use our services in a lawful,
-respectful, and responsible manner. You must not use our services for any
-illegal, fraudulent, harmful, or offensive purposes. You must not interfere
-with or disrupt the operation of our services or the servers or networks that
-host them.</p>
+.active, .dot:hover {
+background-color: #717171;
+}
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>You must respect the intellectual property
-rights of us and our partners. You must not copy, reproduce, distribute,
-modify, or create derivative works of any content or material that belongs to
-us or our partners, without their express permission. You grant us a
-non-exclusive, royalty-free, worldwide license to use, display, and share any
-content or material that you upload or post on our services, for the purpose of
-providing our services.</p>
+/* ফেড অ্যানিমেশনের জন্য */
+.fade {
+-webkit-animation-name: fade;
+-webkit-animation-duration: 1.5s;
+animation-name: fade;
+animation-duration: 1.5s;
+}
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>We reserve the right to modify, suspend, or
-terminate our services or any part of them at any time, without prior notice or
-liability. We also reserve the right to modify, update, or revise these terms
-and conditions at any time, by posting the changes on our website or mobile
-application. Your continued use of our services after such changes constitutes
-your acceptance of the new terms and conditions.</p>
+</style>
+	
+</head>
+<body>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>We provide our services on an &quot;as
-is&quot; and &quot;as available&quot; basis, without any warranties or
-guarantees&gt; of any kind, express or implied. We disclaim all liability for
-any damages or losses arising from or relating to your use of or inability to
-use our services, including but not limited to direct, indirect, incidental,
-consequential, or punitive damages.</p>
+<div class="slideshow-container">
 
-<p class=MsoListParagraphCxSpLast style='text-indent:-.25in'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span dir=LTR></span>Any disputes arising from or relating to
-these terms and conditions or our services shall be governed by and construed
-in accordance with the laws of [COUNTRY]. You agree to submit to the exclusive
-jurisdiction of the courts of [COUNTRY] for the resolution of any such
-disputes.</p>
+<div class="mySlides fade">
+<div class="numbertext">1 / 3</div>
+<img src="beach1.jpg" style="width:100%">
+<div class="text">Your Beach, Your Adventure, Our Service- Cox's Aura</div>
+</div>
 
-<p class=MsoNormal>&nbsp;</p>
+<div class="mySlides fade">
+<div class="numbertext">2 / 3</div>
+<img src="beach2.jpg" style="width:100%">
+<div class="text">The Essence of Cox'sBazar</div>
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">3 / 3</div>
+<img src="beach3.jpg" style="width:100%">
+<div class="text">The longest sea beach in the world</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
 
 </div>
+<br>
+
+<div style="text-align:center">
+<span class="dot" onclick="currentSlide(1)"></span> 
+<span class="dot" onclick="currentSlide(2)"></span> 
+<span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// পরবর্তী/পূর্ববর্তী নিয়ন্ত্রণ
+function plusSlides(n) {
+showSlides(slideIndex += n);
+}
+
+// ইমেজ ডটস নিয়ন্ত্রণ
+function currentSlide(n) {
+showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+var i;
+var slides = document.getElementsByClassName("mySlides");
+var dots = document.getElementsByClassName("dot");
+if (n > slides.length) {slideIndex = 1}    
+if (n < 1) {slideIndex = slides.length}
+for (i = 0; i < slides.length; i++) {
+slides[i].style.display = "none";  
+}
+for (i = 0; i < dots.length; i++) {
+dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex-1].style.display = "block";  
+dots[slideIndex-1].className += " active";
+}
+</script>
+
+<body>
+<div class="header">
+<h1>Privacy Policy</h1>
+<p>This privacy policy explains how we collect, use, and protect your personal information when you visit our website, use our services, or interact with us</p>
+<p>Please read this policy carefully and contact us if you have any questions or concerns.</p>
+</div>
+<header>
+<nav>
+<style>
+.navbar {
+overflow: hidden;
+background-color: #333;
+}
+.navbar a {
+float: left;
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+.navbar a:hover {
+background-color: #ddd;
+color: black;
+}
+</style>
+</head>
+<body>
+</div>
+<div style="padding:16px">
+<h2>What information do we collect?</h2>
+<p>- We may collect the following types of information from you</p>
+<p>- Personal information that you voluntarily provide to us, such as your name, email address, phone number, or other contact details.</p>
+<p>- Technical information that is automatically collected when you access our website, such as your IP address, browser type, device type, operating system, or other information that helps us improve our website and services.</p>
+<p>- Usage information that is generated when you use our website or services, such as the pages you visit, the time and duration of your visit, the links you click, or the features you use.</p>
+<p>- Cookies and similar technologies that are used to enhance your experience on our website, such as remembering your preferences, personalizing your content, or delivering relevant ads.</p>
+</div>
+<div style="padding:16px">
+<h2>How do we use your information?</h2>
+<p>- We may use your information for the following purposes:</p>
+<p>- To provide you with the website and services that you request, such as booking a resort, sending you a confirmation email, or responding to your inquiries.</p>
+<p>- To communicate with you about our website and services, such as sending you newsletters, updates, offers, or surveys.</p>
+<p>- To improve and optimize our website and services, such as analyzing user behavior, testing new features, or resolving technical issues.</p>
+<p>- To protect and secure our website and services, such as detecting and preventing fraud, spam, or unauthorized access.</p>
+<p>- To comply with our legal obligations, such as responding to lawful requests from authorities, enforcing our terms and conditions, or defending our rights and interests.</p>
+</div>
+<div style="padding:16px">
+<h2>How do we share your information?</h2>
+<p>We may share your information with the following parties:</p>
+<p>- Third-party service providers that help us operate our website and services, such as hosting, payment, analytics, or marketing providers.</p>
+<p>- We only share your information with these providers to the extent necessary for them to perform their services for us, and we require them to protect your information and comply with applicable laws.</p>
+<p>- Business partners that offer products or services that may be of interest to you, such as travel agencies, tour operators, or other affiliates.</p>
+<p>- We only share your information with these partners with your consent, and you can opt out of receiving their communications at any time.</p>
+<p>- Other users or visitors of our website, if you choose to share your information publicly, such as posting a review, a comment, or a photo.</p>
+<p>- Please be aware that any information you share publicly may be accessed, used, or disclosed by others, and we are not responsible for their actions.</p>
+<p>- Law enforcement or regulatory authorities, if we are required or permitted to do so by law, such as in response to a subpoena, a court order, or a legal process.</p>
+
+</div>
+<div style="padding:16px">
+<h1>How do we protect your information?</h1>
+<p>- We take reasonable measures to protect your information from unauthorized access, use, or disclosure. We use encryption, firewalls, and other security technologies to safeguard your information.</p>
+<p>- However, no website or service is completely secure, and we cannot guarantee that your information will be safe from hackers, breaches, or other risks.</p>
+</div>
+<div style="padding:16px">
+<h1>How long do we keep your information?</h1>
+<p>We keep your information for as long as necessary to fulfill the purposes for which we collected it, or as required by law. When we no longer need your information, we delete it from our systems or anonymize it so that it cannot be linked back to you.</p>
+</div>
+<div style="padding:16px">
+<h1>What are your choices and rights?</h1>
+<p>You have the following choices and rights regarding your information:</p>
+<p>- You can access, update, or delete your personal information by logging into your account on our website, or by contacting us at info@coxsaura.com.</p>
+<p>- You can opt out of receiving marketing emails from us or our partners by clicking on the unsubscribe link in the email, or by contacting us at info@coxsaura.com.</p>
+<p>- You can manage your cookie preferences by adjusting your browser settings, or by using the cookie consent tool on our website.</p>
+<p>- You can request a copy of your personal information that we hold, or ask us to transfer it to another service provider, by contacting us at info@coxsaura.com.</p>
+<p>- You can object to or restrict our processing of your personal information, or withdraw your consent at any time, by contacting us at info@coxsaura.com.</p>
+<p>- You can lodge a complaint with the relevant data protection authority if you believe that we have violated your privacy rights.</p>
+</div>
+<div style="padding:16px">
+<h3>How do we update this policy?</h3>
+<p>- We may update this policy from time to time to reflect changes in our practices, technologies, or laws.</p>
+<p>- We will notify you of any material changes by posting a notice on our website, or by sending you an email.</p>
+<p>- Your continued use of our website or services after the update means that you accept the updated policy.</p>
+<p>- We encourage you to review this policy periodically to stay informed about how we collect, use, and share your information.</p>
+</div>
+<div style="padding:16px">
+<h3>How can you contact us?</h3>
+<p>If you have any questions or comments about this policy, or if you want to exercise your choices and rights regarding your information, please contact us at: Cox’s Aura [info@coxsaura.com]</p>
+</div>
+
+<p class=MsoNormal>&nbsp;</p>	
+
+</div>
+<footer>
+<!-- ফুটার এরিয়া -->
+</footer>
+</body>
+<div class="navbar">
+<a href="Terms.html">Terms and Conditions</a>
+<a href="index.html">Home</a>
+
+</div>
+<div style="padding:16px">
+<p class=MsoNormal>@2024 Cox's Aura. All right reserved.</p>
+</html>
+
+
+</head>
 
 </body>
 
