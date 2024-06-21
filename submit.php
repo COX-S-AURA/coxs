@@ -1,6 +1,6 @@
 <?php
-$servername = "mjahmad";
-$username = "MJ-AHMAD";
+$servername = "MJ-AHMAD";
+$username = "MJ-AHMAD/kalam";
 $password = "@New2024#";
 $dbname = "INNO";
 
